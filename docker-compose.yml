@@ -1,0 +1,81 @@
+version: '3'
+services:
+  db:
+    image: mysql
+    container_name: db_docker_project
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+    volumes:
+       - dbdata:/var/lib/mysql
+    networks:
+     - dev
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    container_name: phpmyadmin_docker_project
+    links:
+     - db
+    ports:
+    - 8080:80
+    environment:
+      MYSQL_USERNAME: root
+      MYSQL_ROOT_PASSWORD: '123456'
+      PMA_HOST: db
+    networks:
+     - dev
+  # maildev:
+  #   image: maildev/maildev
+  #   container_name: maildev_docker_project_intership
+  #   command: bin/maildev --web 80 --smtp 25 --hide-extensions STARTTLS
+  #   ports:
+  #    - "8083:80"
+  #   restart: always
+  #   networks:
+  #    - dev
+
+  mailcatcher:
+    image: yappabe/mailcatcher
+    container_name: stage_mail
+    ports:
+     - "1025:1025"
+     - "1080:1080"
+    restart: always
+    networks:
+     - dev
+
+      
+  www:
+    build: php
+    container_name: www_docker_project
+    ports:
+     - "8088:80"
+    volumes:
+     - ./php/vhosts:/etc/apache2/sites-enabled
+     - ./:/var/www
+    restart: always
+    networks:
+     - dev
+
+###> doctrine/doctrine-bundle ###
+  database:
+    image: postgres:${POSTGRES_VERSION:-13}-alpine
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-app}
+      # You should definitely change the password in production
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-ChangeMe}
+      POSTGRES_USER: ${POSTGRES_USER:-symfony}
+    volumes:
+      - db-data:/var/lib/postgresql/data:rw
+      # You may use a bind-mounted host directory instead, so that it is harder to accidentally remove the volume and lose all your data!
+      # - ./docker/db/data:/var/lib/postgresql/data:rw
+###< doctrine/doctrine-bundle ###
+
+networks:
+  dev:
+volumes:
+  dbdata:
+
+
+
+###> doctrine/doctrine-bundle ###
+  db-data:
+###< doctrine/doctrine-bundle ###

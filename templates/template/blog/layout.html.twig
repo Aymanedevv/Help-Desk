@@ -1,0 +1,227 @@
+{% extends 'base.html.twig' %}
+{% block body %}        <div class="row mb-2">
+
+    <div class="col-lg-3 col-6">
+        <!-- small box -->
+        <div class="small-box bg-danger">
+            <div class="inner">
+                <h3>65</h3>
+
+                <p>Active</p>
+            </div>
+            <div class="icon">
+                <i class="ion ion-pie-graph"></i>
+            </div>
+            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+        </div>
+    </div>
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
+    <div class="col-lg-3 col-6">
+        <!-- small box -->
+        <div class="small-box bg-warning">
+            <div class="inner">
+                <h3>44</h3>
+
+                <p>Open</p>
+            </div>
+            <div class="icon">
+                <i class="ion ion-pie-graph"></i>
+            </div>
+            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-6">
+        <!-- small box -->
+        <div class="small-box bg-success">
+            <div class="inner">
+                <h3>53<sup style="font-size: 20px"></sup></h3>
+
+                <p>In Progress</p>
+            </div>
+            <div class="icon">
+                <i class="ion ion-pie-graph"></i>
+            </div>
+            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-6">
+        <!-- small box -->
+        <div class="small-box bg-info">
+            <div class="inner">
+                <h3>150</h3>
+
+                <p>Closed</p>
+            </div>
+            <div class="icon">
+                <i class="ion ion-pie-graph"></i>
+            </div>
+            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header border-transparent">
+            <h3 class="card-title">ALL Tickets</h3>
+
+            <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                    <i class="fas fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-tool" data-card-widget="remove">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body p-0">
+            <div class="table-responsive">
+                <table class="table m-0">
+                    <thead>
+                    <tr>
+                        <th>Ticket ID</th>
+                        <th>Title</th>
+                        <th>Status</th>
+                        <th>Type</th>
+                        <th>Category</th>
+                        <th>Creation Date</th>
+                        <th>Consideration Date</th>
+                        <th>Validate</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><a href="pages/examples/invoice.html">OR9842</a></td>
+                        <td>Call of Duty IV</td>
+                        <td><span class="badge badge-success">Shipped</span></td>
+                        <td>
+                            <div class="sparkbar" data-color="#00a65a" data-height="20">Request</div>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><button type="button" class="btn btn-primary">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"></path>
+                                </svg>
+                                Take
+                            </button></td>
+                    </tr>
+                    <tr>
+                        <td><a href="pages/examples/invoice.html">OR1848</a></td>
+                        <td>Samsung Smart TV</td>
+                        <td><span class="badge badge-warning">Pending</span></td>
+                        <td>
+                            <div class="sparkbar" data-color="#f39c12" data-height="20">Request</div>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><button type="button" class="btn btn-primary">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"></path>
+                                </svg>
+                                Take
+                            </button></td>
+                    </tr>
+                    <tr>
+                        <td><a href="pages/examples/invoice.html">OR7429</a></td>
+                        <td>iPhone 6 Plus</td>
+                        <td><span class="badge badge-danger">Delivered</span></td>
+                        <td>
+                            <div class="sparkbar" data-color="#f56954" data-height="20">Incident</div>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><button type="button" class="btn btn-primary">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"></path>
+                                </svg>
+                                Take
+                            </button></td>
+                    </tr>
+                    <tr>
+                        <td><a href="pages/examples/invoice.html">OR7429</a></td>
+                        <td>Samsung Smart TV</td>
+                        <td><span class="badge badge-info">Processing</span></td>
+                        <td>
+                            <div class="sparkbar" data-color="#00c0ef" data-height="20">Request</div>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><button type="button" class="btn btn-primary">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"></path>
+                                </svg>
+                                Take
+                            </button></td>
+                    </tr>
+                    <tr>
+                        <td><a href="pages/examples/invoice.html">OR1848</a></td>
+                        <td>Samsung Smart TV</td>
+                        <td><span class="badge badge-warning">Pending</span></td>
+                        <td>
+                            <div class="sparkbar" data-color="#f39c12" data-height="20">Incident</div>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><button type="button" class="btn btn-primary">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"></path>
+                                </svg>
+                                Take
+                            </button></td>
+                    </tr>
+                    <tr>
+                        <td><a href="pages/examples/invoice.html">OR7429</a></td>
+                        <td>iPhone 6 Plus</td>
+                        <td><span class="badge badge-danger">Delivered</span></td>
+                        <td>
+                            <div class="sparkbar" data-color="#f56954" data-height="20">Request</div>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><button type="button" class="btn btn-primary">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"></path>
+                                </svg>
+                                Take
+                            </button></td>
+                    </tr>
+                    <tr>
+                        <td><a href="pages/examples/invoice.html">OR9842</a></td>
+                        <td>Call of Duty IV</td>
+                        <td><span class="badge badge-success">Shipped</span></td>
+                        <td>
+                            <div class="sparkbar" data-color="#00a65a" data-height="20">Request</div>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><button type="button" class="btn btn-primary">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"></path>
+                                </svg>
+                                Take
+                            </button></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- /.table-responsive -->
+        </div>
+        <!-- /.card-body -->
+        <div class="card-footer clearfix">
+            <a href="{{ path('add_ticket') }}" class="btn btn-sm btn-info float-left">Add new Ticket</a>
+            <a href="javascript:void(0)" class="btn btn-sm btn-secondary float-right">View All Tickets</a>
+        </div>
+        <!-- /.card-footer -->
+    </div>
+
+{% endblock %}
