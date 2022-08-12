@@ -15,6 +15,7 @@ class TemplateController extends AbstractController
             'controller_name' => 'TemplateController',
         ]);
     }
+
     #[Route('/add-ticket', name: 'add_ticket')]
     public function addTicket(): Response
     {
@@ -22,12 +23,13 @@ class TemplateController extends AbstractController
             'controller_name' => 'TemplateController',
         ]);
     }
+
     #[Route('/authen', name: 'app_authen')]
     public function auth(): Response
     {
         return $this->render('authen/authen.html.twig', [
-        'controller_name' => 'AuthenController',
-    ]);
+            'controller_name' => 'AuthenController',
+        ]);
     }
 }
 
