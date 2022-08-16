@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use App\Entity\Ticket;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -9,10 +11,12 @@ use Symfony\Component\Routing\Annotation\Route;
 class TemplateController extends AbstractController
 {
     #[Route('/global-dashboard', name: 'global_dashboard')]
-    public function index(): Response
+    public function index(EntityManagerInterface $manager): Response
     {
+        $tickets=$manager->getRepository(Ticket::class)->findAll();
         return $this->render('template/blog/layout.html.twig', [
             'controller_name' => 'TemplateController',
+            'tickets'=>$tickets
         ]);
     }
 
@@ -21,6 +25,7 @@ class TemplateController extends AbstractController
     {
         return $this->render('template/add ticket/addticket.html.twig', [
             'controller_name' => 'TemplateController',
+
         ]);
     }
 

@@ -4,6 +4,7 @@ namespace App\Form\Type;
 
 use App\Entity\Ticket;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -19,6 +20,7 @@ class TicketType extends AbstractType
             ->add('ConsiderationDate')
             ->add('description')
             ->add('status')
+            ->add('save',SubmitType::class)
         ;
     }
 
