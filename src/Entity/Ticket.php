@@ -26,14 +26,11 @@ class Ticket
     #[ORM\Column(type: Types::DATETIME_MUTABLE)]
     private ?\DateTimeInterface $creationDate = null;
 
-    #[ORM\Column(type: Types::DATETIME_MUTABLE)]
-    private ?\DateTimeInterface $ConsiderationDate = null;
-
     #[ORM\Column(type: Types::TEXT)]
     private ?string $description = null;
 
-    #[ORM\Column(length: 15)]
-    private ?string $status = null;
+    #[ORM\Column(length: 255)]
+    private ?string $image = null;
 
     public function getId(): ?int
     {
@@ -88,18 +85,6 @@ class Ticket
         return $this;
     }
 
-    public function getConsiderationDate(): ?\DateTimeInterface
-    {
-        return $this->ConsiderationDate;
-    }
-
-    public function setConsiderationDate(\DateTimeInterface $ConsiderationDate): self
-    {
-        $this->ConsiderationDate = $ConsiderationDate;
-
-        return $this;
-    }
-
     public function getDescription(): ?string
     {
         return $this->description;
@@ -112,15 +97,16 @@ class Ticket
         return $this;
     }
 
-    public function getStatus(): ?string
+    public function getImage(): ?string
     {
-        return $this->status;
+        return $this->image;
     }
 
-    public function setStatus(string $status): self
+    public function setImage(string $image): self
     {
-        $this->status = $status;
+        $this->image = $image;
 
         return $this;
     }
+
 }
