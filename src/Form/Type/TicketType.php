@@ -53,7 +53,22 @@ class TicketType extends AbstractType
                 ],
             ])
             // ...
-        ;
+
+
+
+            ->add('urgency', ChoiceType::class, [
+                'mapped'=>true,
+                'choices' => [
+                    'Low' => 'Low',
+                    'Medium' => 'Medium',
+                    'Urgent' => 'Urgent',
+                    'Very Urgent' => 'Very Urgent',
+                    'Blocking' => 'Blocking',
+                ],
+            ]);
+
+            // ...
+
     }
 
     public function configureOptions(OptionsResolver $resolver)

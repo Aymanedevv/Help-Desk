@@ -32,6 +32,9 @@ class Ticket
     #[ORM\Column(length: 255)]
     private ?string $image = null;
 
+    #[ORM\Column(length: 255)]
+    private ?string $urgency = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -105,6 +108,18 @@ class Ticket
     public function setImage(string $image): self
     {
         $this->image = $image;
+
+        return $this;
+    }
+
+    public function getUrgency(): ?string
+    {
+        return $this->urgency;
+    }
+
+    public function setUrgency(string $urgency): self
+    {
+        $this->urgency = $urgency;
 
         return $this;
     }

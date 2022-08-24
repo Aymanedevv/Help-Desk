@@ -10,7 +10,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class MailerController extends AbstractController
 {
-    #[Route('/email')]
+    #[Route('/email', name: 'mailbox')]
     public function sendEmail(MailerInterface $mailer): Response
     {
         $email = (new Email())
