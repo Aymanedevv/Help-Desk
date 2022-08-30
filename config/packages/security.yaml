@@ -7,8 +7,8 @@ security:
         # used to reload user from session & other features (e.g. switch_user)
         app_user_provider:
             entity:
-                class: App\Entity\UserChat
-                property: email
+                class: App\Entity\User
+                property: username
         # used to reload user from session & other features (e.g. switch_user)
     firewalls:
         dev:
@@ -28,7 +28,9 @@ security:
 
             # https://symfony.com/doc/current/security/impersonating_user.html
             # switch_user: true
-
+    role_hierarchy:
+        ROLE_COLLABORATOR: ROLE_USER
+        ROLE_SUPPORT: ROLE_USER
     # Easy way to control access for large sections of your site
     # Note: Only the *first* access control that matches will be used
     access_control:

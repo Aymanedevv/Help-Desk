@@ -30,6 +30,7 @@ class TicketType extends AbstractType
             ->add('save',SubmitType::class)
             ->add('image', FileType::class, [
                 'label' => 'Upload image ( file)',
+                'required'=>false,
 
                 // unmapped means that this field is not associated to any entity property
                 'mapped' => false,

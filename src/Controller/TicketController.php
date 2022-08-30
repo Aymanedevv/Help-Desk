@@ -6,6 +6,7 @@ use App\Entity\Ticket;
 use App\Form\Type\TicketType;
 use App\Service\MailerService;
 use Doctrine\ORM\EntityManagerInterface;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\File\Exception\FileException;
 use Symfony\Component\HttpFoundation\Request;
@@ -17,6 +18,7 @@ class TicketController extends AbstractController
 {
 
     #[Route('/new', name: 'app_ticket')]
+    #[IsGranted('ROLE_USER')]
     public function index(Request $request, EntityManagerInterface $manager, MailerService $mailerService, SluggerInterface $slugger): Response
     {
         $ticket = new Ticket();
